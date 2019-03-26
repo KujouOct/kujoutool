@@ -1,6 +1,6 @@
 #!/bin/bash
 
-YOURNAME='xumingze'
+YOURNAME='kujou'
 while :
 do
   stillRunning=$(ps -A | grep "run_hss" |grep -v "grep")
