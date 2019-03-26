@@ -34,7 +34,7 @@ sleep 2
 
 cd  ~/openair-cn/scripts
 sudo ./check_hss_s6a_certificate /usr/local/etc/oai/freeDiameter/ hss.openair4G.eur
-sudo ./check_mme_s6a_certificate /usr/local/etc/oai/freeDiameter/ test-NUC7i7BNH.openair4G.eur
+sudo ./check_mme_s6a_certificate /usr/local/etc/oai/freeDiameter/ xmz.openair4G.eur
 
 cd ~/openair-cn
 sudo git checkout v0.5.0
