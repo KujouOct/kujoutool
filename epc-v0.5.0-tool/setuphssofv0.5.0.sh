@@ -15,7 +15,7 @@ echo -n | openssl s_client -showcerts -connect gitlab.eurecom.fr:443 2>/dev/null
 sleep 1
 
 cd ~
-git config --global http.sslverify false
+sudo git config --global http.sslverify false
 sudo git clone https://github.com/OPENAIRINTERFACE/openair-cn.git
 
 cd ~/openair-cn
