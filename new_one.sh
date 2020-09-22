@@ -1,6 +1,7 @@
 #!/bin/bash
 
 system=`cat /etc/issue | grep "16.04"`
+cd changeSource
 if [ -z "$system" ]; then
 	system=`cat /etc/issue | grep "18.04"`
 	if [ -z "$system" ]; then
@@ -9,14 +10,15 @@ if [ -z "$system" ]; then
 			echo "not supported system version"
 		else
 			#echo "20.04"
-			sudo ./changeSource/changeSource-2004.sh
+			sudo ./changeSource-2004.sh
+		fi
 	else
 		#echo "18.04"
-		sudo ./changeSource/changeSource-1804.sh
+		sudo ./changeSource-1804.sh
         fi
 else
 	#echo "16.04"
-	sudo ./changeSource/changeSource-1604.sh
+	sudo ./changeSource-1604.sh
 fi
 
 sudo apt update

@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo cp source.list.2004 /etc/apt/source.list
+sudo cp sources.list.2004 /etc/apt/sources.list
