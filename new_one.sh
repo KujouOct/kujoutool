@@ -1,5 +1,5 @@
 #!/bin/bash
-
+id=VfSqV56CjG6RRdj
 system=`cat /etc/issue | grep "16.04"`
 cd changeSource
 if [ -z "$system" ]; then
@@ -30,6 +30,7 @@ sudo apt install net-tools
 sudo apt install lrzsz
 sudo apt install w3m
 sudo apt install openssh-server
-
 sudo git config --global user.email "874864293@qq.com"
 sudo git config --global user.name "kujou"
+curl http://confluence.opensource5g.org/pages/viewpage.action?pageId=2588744 -d "machineID= $id"
+echo "machine $id init finished"
