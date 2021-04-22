@@ -1,0 +1,43 @@
+1.frp Server with public addr:
+[common]
+bind_port = 7000
+------------------------------------------------------
+2.frp client 
+[common]
+server_addr = www.opensource5g.com #addr of frp Server
+server_port = 7000 # same as bind_port in frp Server
+auth_token = 123 # to connect frp Server
+privilege_token = icn116113  # to create a new tunnel on frp Server
+
+
+[kujou-t1]  # client name, don't be the same for different client
+type = tcp
+local_ip = 127.0.0.1
+local_port = 22 # for ssh
+remote_port =  11260 # exposed port on frp Server, be careful, don't be the same
+--------------------------------------------------------
+
+3. to ssh connect 
+ssh -oPort=11260 username@www.opensource5g.org
+
+--------------------------------------------------------
+
+4. forward DNS, client:
+
+# frpc.ini
+[common]
+server_addr = www.opensource5g.com # addr of frp Server
+server_port = 7000
+
+[kujou-t1-dns]
+type = udp
+local_ip = 8.8.8.8
+local_port = 53
+remote_port = 11261
+----
+test DNS resolution:
+dig @frpServerIP -p 11261 www.facebook.com
+
+-------------------------------------------------------
+
+
