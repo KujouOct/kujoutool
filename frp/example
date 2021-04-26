@@ -14,10 +14,14 @@ privilege_token = icn116113  # to create a new tunnel on frp Server
 type = tcp
 local_ip = 127.0.0.1
 local_port = 22 # for ssh
-remote_port =  11260 # exposed port on frp Server, be careful, don't be the same
+remote_port =  11261 # exposed port on frp Server, be careful, don't be the same
 --------------------------------------------------------
 
-3. to ssh connect 
+3. to ssh connect
+#Xshell:
+ssh username@www.opensource5g.org:11261
+
+#Other: 
 ssh -oPort=11260 username@www.opensource5g.org
 
 --------------------------------------------------------
