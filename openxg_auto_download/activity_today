@@ -1,0 +1,16 @@
+#!/bin/bash
+
+download_times=100
+
+
+mkdir acti_dir
+cd acti_dir
+cp ../target_project ./
+cp ../runme runme_today
+	
+for a in $(seq 1 $download_times)
+do
+./runme_today
+done
+
+rm -rf runme_today

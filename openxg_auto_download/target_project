@@ -1,0 +1,11 @@
+#!/bin/bash
+
+target=nrf
+
+rm -rf $target
+mkdir $target
+cd $target
+git clone http://gitlab.openxg.org.cn/openxg/nrf
+cd ../
+sleep 2m
+

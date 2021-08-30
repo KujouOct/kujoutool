@@ -1,0 +1,8 @@
+#!/usr/bin/expect
+spawn ./target_project
+expect "Username for 'http://gitlab.openxg.org.cn'"
+send "2623548103@qq.com\n"
+expect "Password for 'http://2623548103@qq.com@gitlab.openxg.org.cn'"
+send "swan,924\n"
+interact
+
